@@ -1,7 +1,10 @@
-package org.java10.examples;
+package org.java10.examples.mixin;
 
-public class Vehicle {
+@FunctionalInterface
+public interface Vehicle {
 
     static void create() {}
+
+    void op();
 
 }

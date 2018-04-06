@@ -24,11 +24,14 @@ public class ObjectExample {
         stringList.add("now");
         stringList.add("!");
 
-
+        System.out.println("Printing a String: ");
         System.out.println(string);
+        System.out.println("\nPrinting a formatted LocalDate: ");
         System.out.println(now.format(formatter));
+        System.out.println("\nPrinting a String List: ");
         System.out.println(stringList);
 
+        System.out.println("\nPrinting the inferred classes: ");
         System.out.println(string.getClass());
         System.out.println(now.getClass());
         System.out.println(formatter.getClass());
