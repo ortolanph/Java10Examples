@@ -28,5 +28,10 @@ public class ObjectExample {
         System.out.println(string);
         System.out.println(now.format(formatter));
         System.out.println(stringList);
+
+        System.out.println(string.getClass());
+        System.out.println(now.getClass());
+        System.out.println(formatter.getClass());
+        System.out.println(stringList.getClass());
     }
 }

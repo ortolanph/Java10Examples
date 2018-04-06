@@ -5,7 +5,7 @@ import org.java10.examples.beans.Product;
 public class ProductExample {
 
     public static void main(String[] args) {
-        var modifiedProduct = new Product(8f, 0.5f) {
+        var modifiedProduct = new Product("An internet product", 8f, 0.5f) {
             public float applyInternetPrice() {
                 return getPrice() - 1f + getTax();
             }
@@ -17,7 +17,7 @@ public class ProductExample {
         System.out.println(modifiedProduct.applyInternetPrice());
         System.out.println("----------------");
 
-        var commonProduct = new Product(8f, 0.5f);
+        var commonProduct = new Product("A not internet product", 8f, 0.5f);
 
         System.out.println("Common product");
         System.out.println(commonProduct.calculateTotal());
