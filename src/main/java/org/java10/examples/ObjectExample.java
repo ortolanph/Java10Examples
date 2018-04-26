@@ -1,5 +1,8 @@
 package org.java10.examples;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -36,5 +39,23 @@ public class ObjectExample {
         System.out.println(now.getClass());
         System.out.println(formatter.getClass());
         System.out.println(stringList.getClass());
+
+        System.out.println("\nListing with for-each");
+        for(var string : stringList) {
+            System.out.println(string);
+        }
+
+        System.out.println("\nReading a file with try-with-resources");
+        try(var fileReader = new FileReader("README.md")) {
+            var buffer = new char[1024];
+
+            while(fileReader.read(buffer) > 0) {
+                System.out.println(new String(buffer));
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
