@@ -24,7 +24,7 @@ public class ComplexObjectExample {
 
         System.out.println("-[ Bill ]-----------------------------------------------------------");
 
-        for(Product product : productList) {
+        for(var product : productList) {
             System.out.println(product.toString());
         }
 
