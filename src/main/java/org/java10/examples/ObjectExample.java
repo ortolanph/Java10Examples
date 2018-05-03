@@ -40,6 +40,11 @@ public class ObjectExample {
         System.out.println(formatter.getClass());
         System.out.println(stringList.getClass());
 
+        System.out.println("\nListing with simple for");
+        for(var i = 0; i < stringList.size(); i++) {
+            System.out.println(stringList.get(i));
+        }
+
         System.out.println("\nListing with for-each");
         for(var string : stringList) {
             System.out.println(string);
