@@ -15,6 +15,7 @@ public class ProductExample {
         System.out.println(modifiedProduct.calculateTotal());
         System.out.println(modifiedProduct.applyDiscount(0.15f));
         System.out.println(modifiedProduct.applyInternetPrice());
+        System.out.println(modifiedProduct.getClass());
         System.out.println("----------------");
 
         var commonProduct = new Product("A not internet product", 8f, 0.5f);
@@ -22,6 +23,7 @@ public class ProductExample {
         System.out.println("Common product");
         System.out.println(commonProduct.calculateTotal());
         System.out.println(commonProduct.applyDiscount(0.15f));
+        System.out.println(commonProduct.getClass());
         System.out.println("--------------");
     }
 
