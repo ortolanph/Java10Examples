@@ -1,0 +1,43 @@
+@startuml
+
+class Bill {
+    -List<ProductLine> products
+    -Bill()
+    +{static}Bill newBill(
+    +Bill addProduct(Product product, DiscoutType type, float discount)
+    +List<Product> productList()
+    +double total()
+    +double taxes()
+}
+
+class ProductLine {
+    -Product product
+    -DiscoutType discoutType
+    -float discount
+    -ProductLine(Product product, DiscoutType discoutType, float discount)
+    +{static}newLine(Product product, DiscoutType discoutType, float discount)
+    +DiscoutType getDiscoutType()
+    +Product getProduct()
+    +float getDiscount()
+}
+
+class Product {
+    -String name
+    -float price
+    -float price
+    +Product(String name, float price, float tax)
+    +float calculateTotal()
+    +float applyDiscount(float discount)
+}
+
+enum DiscountType {
+    +NO_DISCOUNT
+    +COMMON_DISCOUNT
+    +INTERNET_DISCOUNT
+}
+
+Bill "1" *--> "many"  ProductLine
+ProductLine --> Product
+ProductLine --> DiscountType
+
+@enduml

@@ -1,0 +1,33 @@
+@startuml
+
+interface Vehicle {
+void op()
+.. default ..
+void create()
+}
+
+interface Navigable {
+.. default ..
+#void starboard()
+#void port()
+#void sail()
+#void anchorUp()
+#void anchorDown()
+}
+
+interface Flyer {
+.. default ..
+#void takeOff()
+#void land()
+#void fly()
+}
+
+class Mixin
+
+Vehicle <|-- Navigable
+Vehicle <|-- Flyer
+
+Mixin <|-- Navigable
+Mixin <|-- Flyer
+
+@enduml
