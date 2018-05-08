@@ -22,12 +22,12 @@ interface Flyer {
 #void fly()
 }
 
-class Mixin
+object seaplane
 
 Vehicle <|-- Navigable
 Vehicle <|-- Flyer
 
-Mixin <|-- Navigable
-Mixin <|-- Flyer
+seaplane <|-- Navigable
+seaplane <|-- Flyer
 
 @enduml
